@@ -1,0 +1,10 @@
+# Print 5 lines before and 5 lines after match
+-B5
+-A5
+
+# Pass the colored terms onto the pager
+--color
+
+# Use more -r to preserve highlighting
+--pager=more -r
+
