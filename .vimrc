@@ -34,7 +34,7 @@ match Whitespace /\s\+$/ " match trailing spaces
 let tab = matchadd("Whitespace", "\t", -1) " match tabs
 
 " Mappings
-map <leader>d :exe 'NERDTreeToggle ' . getcwd()<CR>
+map <leader>d :VSTreeExplore<CR>
 map <leader>D :exe '% s/\s\+$//e'<CR> " rm trailing spaces
 map <leader><Tab> :ToggleTab<CR>
 map <leader>m :mak<CR><CR>
