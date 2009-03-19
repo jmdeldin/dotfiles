@@ -34,13 +34,20 @@ match Whitespace /\s\+$/ " match trailing spaces
 let tab = matchadd("Whitespace", "\t", -1) " match tabs
 
 " Mappings
-map <leader>d :VSTreeExplore<CR>
-map <leader>D :exe '% s/\s\+$//e'<CR> " rm trailing spaces
-map <leader><Tab> :ToggleTab<CR>
-map <leader>m :mak<CR><CR>
-map <leader>s :w<CR>
-map <leader>v :setlocal spell! spelllang=en_us<CR>
-vmap # :s/^/#/<CR>:noh<CR> " block comment
+" Open VSTreeExplore
+nmap <leader>d :VSTreeExplore<CR>
+" Remove trailing spaces
+nmap <leader>D :exe '% s/\s\+$//e'<CR>
+" Toggle soft and hard tabs
+nmap <leader><Tab> :ToggleTab<CR>
+" Make
+nmap <leader>m :mak<CR><CR>
+" Saving
+nmap <leader>s :w<CR>
+" Toggle spell-check
+nmap <leader>v :setlocal spell! spelllang=en_us<CR>
+" Block comments
+vmap # :s/^/#/<CR>:noh<CR>
 
 source ~/.vim/scripts/closetag.vim
 
