@@ -96,6 +96,9 @@ nmap <leader><Tab> :ToggleTab<CR>
 " Make
 nmap <leader>m :mak<CR><CR>
 
+" Rake
+nmap <leader>r :!rake<CR><CR>
+
 " Saving
 nmap <leader>s :w<CR>
 
