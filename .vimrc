@@ -1,4 +1,25 @@
 """"""""""""""""""""""""""""""
+" Functions
+""""""""""""""""""""""""""""""
+" Determines the OS
+func! GetOS()
+    if has('win32') || has('win64')
+        return 'win'
+    elseif has('unix')
+        return (system('uname -a') =~? '^darwin') ? 'mac' : 'unix'
+    endif
+endfunc
+
+
+""""""""""""""""""""""""""""""
+" Init
+""""""""""""""""""""""""""""""
+let os = GetOS()
+" Load closetag
+runtime scripts/closetag.vim
+
+
+""""""""""""""""""""""""""""""
 " Colorscheme
 """"""""""""""""""""""""""""""
 colo ir_black
@@ -44,14 +65,11 @@ filetype plugin indent on
 " Auto-reload .vimrc on save
 au bufwritepost $MYVIMRC source %
 
-" Load closetag
-runtime scripts/closetag.vim
-
 
 """"""""""""""""""""""""""""""
 " Highlight unwanted spaces
 """"""""""""""""""""""""""""""
-hi Whitespace ctermbg=cyan
+hi Whitespace ctermbg=cyan guibg=cyan
 
 " Highlight trailing spaces
 match Whitespace /\s\+$/
@@ -84,9 +102,14 @@ nmap <leader>s :w<CR>
 " Toggle spell-check
 nmap <leader>v :setlocal spell! spelllang=en_us<CR>
 
-" System copy/paste (Mac)
-vmap <leader>c :w !pbcopy<CR>
-nmap <leader>p :r !pbpaste<CR>
+" System copy/paste
+if os == 'mac'
+    vmap <leader>c :w !pbcopy<CR>
+    nmap <leader>p :r !pbpaste<CR>
+else
+    vmap <leader>c "+y
+    nmap <leader>p "+gP
+endif
 
 " Block comments
 vmap # :s/^/#/<CR>:noh<CR>
@@ -97,3 +120,16 @@ vmap # :s/^/#/<CR>:noh<CR>
 """"""""""""""""""""""""""""""
 " ISO timestamp
 iab isoD <C-R>=strftime('%Y-%m-%d %H:%m %z')<CR>
+
+
+""""""""""""""""""""""""""""""
+" gVim options (Windows)
+""""""""""""""""""""""""""""""
+if os == 'win' && has("gui")
+    set gfn=Lucida_Console:h9:cANSI
+    " No toolbar
+    set guioptions-=T
+    " Sane backspace behavior
+    set backspace=2
+endif
+
