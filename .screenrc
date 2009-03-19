@@ -1,0 +1,11 @@
+startup_message off
+
+# Launch 2 screens on startup
+split
+# Have bash login so $PATH will be updated
+screen -t Vim bash -l -c 'vim' 0
+focus
+screen -t canvas bash -l
+# switch focus back to vim
+focus up
+

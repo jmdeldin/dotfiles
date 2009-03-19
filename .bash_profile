@@ -1,5 +1,5 @@
 source ~/bin/git-completion.bash
-export PATH=$PATH:~/bin:/usr/local/mysql/bin/
+export PATH=$PATH:~/bin:/usr/local/mysql/bin
 
 # Prompt
 # {green}cwd(git_branch)>{/green}
@@ -12,5 +12,4 @@ shopt -s histappend
 
 # Aliases
 alias ll='ls -al'
-alias mkpl='php ~/Sites/plugins/make_txp/make.php'
 
