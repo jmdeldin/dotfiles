@@ -39,7 +39,7 @@ set hlsearch
 " Filetypes
 """"""""""""""""""""""""""""""
 filetype plugin indent on
-au bufwritepost .vimrc source % " auto-reload .vimrc on save
+au bufwritepost $MYVIMRC source % " auto-reload .vimrc on save
 
 
 """"""""""""""""""""""""""""""
