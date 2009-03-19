@@ -91,3 +91,9 @@ nmap <leader>p :r !pbpaste<CR>
 " Block comments
 vmap # :s/^/#/<CR>:noh<CR>
 
+
+""""""""""""""""""""""""""""""
+" Abbreviations
+""""""""""""""""""""""""""""""
+" ISO timestamp
+iab isoD <C-R>=strftime('%Y-%m-%d %H:%m %z')<CR>
