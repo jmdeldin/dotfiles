@@ -37,10 +37,15 @@ set hlsearch
 
 
 """"""""""""""""""""""""""""""
-" Filetypes
+" Filetypes & scripts
 """"""""""""""""""""""""""""""
 filetype plugin indent on
-au bufwritepost $MYVIMRC source % " auto-reload .vimrc on save
+
+" Auto-reload .vimrc on save
+au bufwritepost $MYVIMRC source %
+
+" Load closetag
+runtime scripts/closetag.vim
 
 
 """"""""""""""""""""""""""""""
@@ -85,6 +90,4 @@ nmap <leader>p :r !pbpaste<CR>
 
 " Block comments
 vmap # :s/^/#/<CR>:noh<CR>
-
-source ~/.vim/scripts/closetag.vim
 
