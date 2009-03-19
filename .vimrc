@@ -60,7 +60,7 @@ match Whitespace /\s\+$/
 2match Whitespace /\t/
 
 " Highlight lines longer than 78 chars
-match Whitespace /\%>78v.\+/
+3match Whitespace /\%>78v.\+/
 
 
 """"""""""""""""""""""""""""""
