@@ -15,6 +15,7 @@ endfunc
 " Init
 """"""""""""""""""""""""""""""
 let os = GetOS()
+
 " Load closetag
 runtime scripts/closetag.vim
 
@@ -124,6 +125,8 @@ vmap # :s/^/#/<CR>:noh<CR>
 " ISO timestamp
 iab isoD <C-R>=strftime('%Y-%m-%d %H:%m %z')<CR>
 
+" @author
+iab jmauth Jon-Michael Deldin <dev@jmdeldin.com>
 
 """"""""""""""""""""""""""""""
 " gVim options (Windows)
