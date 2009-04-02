@@ -1,0 +1,11 @@
+#/bin/bash
+# file:     install
+# desc:     Symlinks dotfiles to home directory
+# author:   Jon-Michael Deldin <dev@jmdeldin.com>
+# usage:    ./install
+
+for file in .*[^.]; do
+    if [[ ! $file =~ "git" ]]; then
+        ln -s -i $(pwd)/${file} ~/${file}
+    fi
+done
