@@ -9,3 +9,6 @@ screen -t canvas bash -l
 # switch focus back to vim
 focus up
 
+# {# title}+...HH:MM
+hardstatus alwayslastline "%-Lw %n %t %+Lw %-= %c"
+
