@@ -1,13 +1,8 @@
 startup_message off
 
-# Launch 2 screens on startup
-split
-# Have bash login so $PATH will be updated
-screen -t Vim bash -l -c 'vim' 0
-focus
-screen -t canvas bash -l
-# switch focus back to vim
-focus up
+# Easier than updating $PATH
+screen bash -l
+bind ^c screen bash -l
 
 # {# title}+...HH:MM
 hardstatus alwayslastline "%-Lw %n %t %+Lw %-= %c"
