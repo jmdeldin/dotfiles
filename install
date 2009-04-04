@@ -4,8 +4,10 @@
 # author:   Jon-Michael Deldin <dev@jmdeldin.com>
 # usage:    ./install
 
+# get all dot files except for '.' and '..'
 for file in .*[^.]; do
     if [[ ! $file =~ "git" ]]; then
         ln -s -i $(pwd)/${file} ~/${file}
     fi
 done
+
