@@ -23,8 +23,10 @@ runtime scripts/closetag.vim
 """"""""""""""""""""""""""""""
 " Colorscheme
 """"""""""""""""""""""""""""""
-colo ir_black
-set bg=light
+if $TERM == 'xterm-256color'
+    set t_Co=256
+    colo zenburn
+endif
 syn on
 
 
