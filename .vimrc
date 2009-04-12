@@ -6,7 +6,7 @@ func! GetOS()
     if has('win32') || has('win64')
         return 'win'
     elseif has('unix')
-        return (system('uname -a') =~? '^darwin') ? 'mac' : 'unix'
+        return (system('uname') =~ 'darwin') ? 'mac' : 'unix'
     endif
 endfunc
 
