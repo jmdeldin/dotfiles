@@ -19,6 +19,9 @@ let os = GetOS()
 " Load closetag
 runtime scripts/closetag.vim
 
+" OS X dist. disables modelines by default
+set modelines=5
+
 
 """"""""""""""""""""""""""""""
 " Colorscheme
