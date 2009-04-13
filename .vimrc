@@ -113,10 +113,10 @@ nmap <leader>v :setlocal spell! spelllang=en_us<CR>
 
 " System copy/paste
 if os == 'mac'
-    vmap <leader>c :w !pbcopy<CR>
+    vmap <leader>y :w !pbcopy<CR>
     nmap <leader>p :r !pbpaste<CR>
 else
-    vmap <leader>c "+y
+    vmap <leader>y "+y
     nmap <leader>p "+gP
 endif
 
