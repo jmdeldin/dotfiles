@@ -6,7 +6,7 @@ func! GetOS()
     if has('win32') || has('win64')
         return 'win'
     elseif has('unix')
-        return (system('uname') =~ 'darwin') ? 'mac' : 'unix'
+        return (system('uname') =~ 'Darwin') ? 'mac' : 'unix'
     endif
 endfunc
 
@@ -113,10 +113,10 @@ nmap <leader>v :setlocal spell! spelllang=en_us<CR>
 
 " System copy/paste
 if os == 'mac'
-    vnoremap <leader>y :w !pbcopy<CR>
+    vmap <leader>y :w !pbcopy<CR>
     nmap <leader>p :r !pbpaste<CR>
 else
-    vnoremap <leader>y "+y
+    vmap <leader>y "+y
     nmap <leader>p "+gP
 endif
 
