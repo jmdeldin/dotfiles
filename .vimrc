@@ -39,7 +39,7 @@ syn on
 set showcmd
 set ruler
 set wildmenu
-set wildmode=list
+set wildmode=list:longest
 set cursorline
 
 
