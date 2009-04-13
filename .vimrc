@@ -133,14 +133,22 @@ iab isoD <C-R>=strftime('%Y-%m-%d %H:%m %z')<CR>
 " @author
 iab jmauth Jon-Michael Deldin <dev@jmdeldin.com>
 
+
 """"""""""""""""""""""""""""""
-" gVim options (Windows)
+" gVim
 """"""""""""""""""""""""""""""
-if os == 'win' && has("gui")
-    set gfn=Lucida_Console:h9:cANSI
+if has('gui')
+    colo oceandeep
     " No toolbar
     set guioptions-=T
-    " Sane backspace behavior
-    set backspace=2
+    " No audible bell
+    set vb
+    if os == 'win'
+        " Sane backspace behavior
+        set backspace=2
+        set gfn=Lucida_Console:h9:cANSI
+    elseif os == 'mac'
+        set fuoptions=maxvert,maxhorz
+    endif
 endif
 
