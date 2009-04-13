@@ -12,4 +12,5 @@ shopt -s histappend
 
 # Aliases
 alias ll='ls -al'
+alias php='/usr/local/php5/bin/php' # entropy.ch version
 
