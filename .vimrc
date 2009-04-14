@@ -71,9 +71,12 @@ filetype plugin indent on
 " Auto-reload .vimrc on save
 au bufwritepost $MYVIMRC source %
 
+" Tasklist plugin
+let g:tlTokenList = ['FIXME', 'TODO', 'CHANGED', 'DONE']
+
 
 """"""""""""""""""""""""""""""
-" Highlight unwanted spaces
+" Highlight-patterns
 """"""""""""""""""""""""""""""
 hi Whitespace ctermbg=cyan guibg=cyan
 
@@ -85,6 +88,11 @@ match Whitespace /\s\+$/
 
 " Highlight lines longer than 78 chars
 3match Whitespace /\%>78v.\+/
+
+au BufWinEnter * let todo    = matchadd('Search', 'TODO', -1)
+au BufWinEnter * let fixme   = matchadd('Error', 'FIXME', -1)
+au BufWinEnter * let changed = matchadd('Label', 'CHANGED', -1)
+au BufWinEnter * let done    = matchadd('Label', 'DONE', -1)
 
 
 """"""""""""""""""""""""""""""
