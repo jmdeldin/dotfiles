@@ -22,6 +22,9 @@ runtime scripts/closetag.vim
 " OS X dist. disables modelines by default
 set modelines=5
 
+" Jump to the last known cursor position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 
 """"""""""""""""""""""""""""""
 " Colorscheme
