@@ -160,6 +160,7 @@ if has('gui_running')
         set gfn=Lucida_Console:h9:cANSI
     elseif os == 'mac'
         set fuoptions=maxvert,maxhorz
+        set gfn=Monaco:h12
     endif
 endif
 
