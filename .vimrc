@@ -152,8 +152,8 @@ if has('gui')
     colo oceandeep
     " No toolbar
     set guioptions-=T
-    " No audible bell
-    set vb
+    " No bells
+    set vb t_vb=
     if os == 'win'
         " Sane backspace behavior
         set backspace=2
