@@ -148,7 +148,7 @@ iab jmauth Jon-Michael Deldin <dev@jmdeldin.com>
 """"""""""""""""""""""""""""""
 " gVim
 """"""""""""""""""""""""""""""
-if has('gui')
+if has('gui_running')
     colo oceandeep
     " No toolbar
     set guioptions-=T
