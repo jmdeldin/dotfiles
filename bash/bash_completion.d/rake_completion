@@ -1,0 +1,13 @@
+#!/bin/bash
+# http://pastie.org/217324
+
+export COMP_WORDBREAKS=${COMP_WORDBREAKS/\:/}
+
+_rake_completion() {
+  if [ -f Rakefile ]; then
+    COMPREPLY=($(compgen -W "`rake -s -T | awk '{{print $2}}'`" -- ${COMP_WORDS[COMP_CWORD]}))
+    return 0
+  fi
+}
+complete -o default -o nospace -F _rake_completion rake
+

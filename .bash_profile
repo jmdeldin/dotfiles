@@ -1,4 +1,4 @@
-source ~/bin/git-completion.bash
+source ~/dotfiles/bash/bash_completion
 export PATH=$PATH:~/bin:/usr/local/mysql/bin
 
 # Prompt
