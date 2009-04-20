@@ -1,0 +1,10 @@
+[user]
+	name = Jon-Michael Deldin
+	email = dev@jmdeldin.com
+[alias]
+	ci = commit
+        co = checkout
+[color]
+	branch = auto
+	diff = auto
+	status = auto

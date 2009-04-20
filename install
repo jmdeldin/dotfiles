@@ -6,7 +6,7 @@
 
 # get all dot files except for '.' and '..'
 for file in .*[^.]; do
-    if [[ ! $file =~ "git" ]]; then
+    if [[ ! $file == ".git" ]]; then
         ln -s -i $(pwd)/${file} ~/${file}
     fi
 done
