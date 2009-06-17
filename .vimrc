@@ -135,7 +135,12 @@ vmap # :s/^/#/<CR>:noh<CR>
 iab isoD <C-R>=strftime('%Y-%m-%d %H:%m %z')<CR>
 
 " @author
-iab jmauth Jon-Michael Deldin <dev@jmdeldin.com>
+" Assume windows == work PC
+if os == 'win'
+    iab jmauth Jon-Michael Deldin <jon-michael.deldin@umontana.edu>
+else
+    iab jmauth Jon-Michael Deldin <dev@jmdeldin.com>
+endif
 
 
 """"""""""""""""""""""""""""""
