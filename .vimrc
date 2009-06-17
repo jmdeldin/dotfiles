@@ -27,18 +27,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 
 """"""""""""""""""""""""""""""
-" Colorscheme
+" UI
 """"""""""""""""""""""""""""""
-if $TERM == 'xterm-256color'
-    set t_Co=256
-    colo zenburn
-endif
 syn on
-
-
-""""""""""""""""""""""""""""""
-" Periphery
-""""""""""""""""""""""""""""""
+set mouse=a
 set showcmd
 set ruler
 set wildmenu
