@@ -38,6 +38,12 @@ set wildmenu
 set wildmode=list:longest
 set cursorline
 
+" No bells
+set vb t_vb=
+
+" Backspace over everything
+set backspace=2
+
 
 """"""""""""""""""""""""""""""
 " Text settings
@@ -140,11 +146,7 @@ if has('gui_running')
     colo oceandeep
     " No toolbar
     set guioptions-=T
-    " No bells
-    set vb t_vb=
     if os == 'win'
-        " Sane backspace behavior
-        set backspace=2
         set gfn=Lucida_Console:h9:cANSI
     elseif os == 'mac'
         set fuoptions=maxvert,maxhorz
