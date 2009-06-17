@@ -74,7 +74,7 @@ filetype plugin indent on
 au bufwritepost $MYVIMRC source %
 
 " Tasklist plugin
-let g:tlTokenList = ['FIXME', 'TODO', 'CHANGED', 'DONE']
+let g:tlTokenList = ['FIXME', 'TODO', 'CHANGED']
 
 
 """"""""""""""""""""""""""""""
@@ -89,7 +89,6 @@ match SpellRare '.\{78,\}'
 au BufWinEnter * let todo    = matchadd('Search', 'TODO', -1)
 au BufWinEnter * let fixme   = matchadd('Error', 'FIXME', -1)
 au BufWinEnter * let changed = matchadd('Label', 'CHANGED', -1)
-au BufWinEnter * let done    = matchadd('Label', 'DONE', -1)
 
 
 """"""""""""""""""""""""""""""
