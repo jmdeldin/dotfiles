@@ -73,16 +73,11 @@ let g:tlTokenList = ['FIXME', 'TODO', 'CHANGED', 'DONE']
 """"""""""""""""""""""""""""""
 " Highlight-patterns
 """"""""""""""""""""""""""""""
-hi Whitespace ctermbg=cyan guibg=cyan
-
-" Highlight trailing spaces
-match Whitespace /\s\+$/
-
-" Highlight tabs
-2match Whitespace /\t/
+" Highlight tabs and trailing spaces
+set list listchars=tab:»·,trail:·
 
 " Highlight lines longer than 78 chars
-3match Whitespace /\%>78v.\+/
+match SpellRare '.\{78,\}'
 
 au BufWinEnter * let todo    = matchadd('Search', 'TODO', -1)
 au BufWinEnter * let fixme   = matchadd('Error', 'FIXME', -1)
