@@ -33,6 +33,7 @@ syn on
 set mouse=a
 set showcmd
 set ruler
+set laststatus=2
 set wildmenu
 set wildmode=list:longest
 set cursorline
