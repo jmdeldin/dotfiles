@@ -1,0 +1,10 @@
+# no more double-tab to complete
+set show-all-if-ambiguous
+
+# vi-mode
+set editing-mode vi
+set keymap vi-insert
+
+# <C-l> to clear screen in insert-mode (vi)
+"\C-l": clear-screen
+

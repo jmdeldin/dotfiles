@@ -25,6 +25,7 @@ export HISTSIZE=100000
 shopt -s histappend
 
 # Aliases
+alias info='info --vi-keys'
 alias ll='ls -al'
 alias pi='sudo port -v install'
 
