@@ -26,4 +26,5 @@ shopt -s histappend
 
 # Aliases
 alias ll='ls -al'
+alias pi='sudo port -v install'
 
