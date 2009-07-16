@@ -12,12 +12,17 @@ if [ -f /opt/local/etc/bash_completion ]; then
 elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi;
-# Load custom configs
-. ~/bash/completions
+
+# Load bash scripts
+if [ -d ~/bash ]; then
+    for f in ~/bash/*; do
+        . $f
+    done
+fi
 
 # Prompt
-# {green}cwd(git_branch)>{/green}
-PS1="\[\e[32m\]\W\$(__git_ps1 '(%s)')>\[\e[0m\] "
+# cwd{red}(git_branch)>{/red}
+PS1="\w\[\e[1;31m\]\$(git_prompt)>\[\e[0m\] "
 
 # History
 export HISTCONTROL=erasedups:ignorespace
