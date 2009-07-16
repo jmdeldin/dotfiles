@@ -1,5 +1,19 @@
-source ~/dotfiles/bash/bash_completion
-export PATH=$PATH:~/bin:/usr/local/mysql/bin
+[[ -d ~/bin ]]; export PATH=$PATH:~/bin
+
+# MacPorts
+if [ $(uname) == 'Darwin' ] && [ -d /opt/local ]; then
+    export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+    export MANPATH=$MANPATH:/opt/local/share/man
+fi;
+
+# Bash completion
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi;
+# Load custom configs
+. ~/bash/completions
 
 # Prompt
 # {green}cwd(git_branch)>{/green}
@@ -12,5 +26,4 @@ shopt -s histappend
 
 # Aliases
 alias ll='ls -al'
-alias php='/usr/local/php5/bin/php' # entropy.ch version
 

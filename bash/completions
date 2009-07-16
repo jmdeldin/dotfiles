@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Completion functions for bash_completion
+#
+
+# Make completion
+# Adapted from <https://bugzilla.redhat.com/show_bug.cgi?id=116961>
+make_completion() {
+    if [ -f Makefile ]; then
+        COMPREPLY=($(grep "^[[:alnum:]]\+:" Makefile | sed 's/:.*$//'))
+    fi
+}
+complete -o default -o nospace -F make_completion make
+
