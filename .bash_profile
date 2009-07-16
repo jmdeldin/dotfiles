@@ -1,2 +1,2 @@
-[[ -f .bashrc ]]; . .bashrc
+[[ -f .bashrc ]] && . .bashrc
 

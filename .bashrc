@@ -1,4 +1,4 @@
-[[ -d ~/bin ]]; export PATH=$PATH:~/bin
+[[ -d ~/bin ]] && export PATH=$PATH:~/bin
 
 # MacPorts
 if [ $(uname) == 'Darwin' ] && [ -d /opt/local ]; then
