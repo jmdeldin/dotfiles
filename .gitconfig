@@ -3,8 +3,10 @@
 	email = dev@jmdeldin.com
 [alias]
 	ci = commit
-        co = checkout
+	co = checkout
 [color]
 	branch = auto
 	diff = auto
 	status = auto
+[merge]
+	tool = vimdiff
