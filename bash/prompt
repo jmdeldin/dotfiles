@@ -27,9 +27,9 @@ function git_prompt {
 # Display "#" for root/sudo and "$" for users
 function user_sigil {
     if [ $UID -eq 0 ]; then
-        echo #
+        echo '#'
     else
-        echo $
+        echo '$'
     fi
 }
 
@@ -37,3 +37,4 @@ function user_sigil {
 function show_prompt {
     echo "\w\[\e[1;31m\]\$(git_prompt) \$(user_sigil)\[\e[0m\] "
 }
+
