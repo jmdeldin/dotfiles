@@ -7,12 +7,7 @@ set focuscontent
 " use Firefox's default popup behavior (new window)
 set popups=2
 
-set editor='~/bin/mvim -f -c "set ft=xml"'
-" TODO: Make cross-platform - something like this:
-"javascript <<EOF
-"ed = (liberator.execute('run uname') == 'Darwin') ? '~/bin/mvim' : 'gvim';
-"liberator.execute('set editor=' + ed + ' -f -c "set ft=xml"');
-"EOF
+set editor='bash -lc "/opt/local/bin/mvim -c \'set ft=xml\' -f \$*" mvim '
 
 " No bells
 set visualbell
