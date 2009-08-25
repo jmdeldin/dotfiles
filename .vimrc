@@ -10,6 +10,8 @@ func! GetOS()
     endif
 endfunc
 
+" Free range cursor
+set virtualedit=all
 
 """"""""""""""""""""""""""""""
 " Init
@@ -21,6 +23,9 @@ runtime scripts/closetag.vim
 
 " OS X dist. disables modelines by default
 set modelines=5
+
+" 256 colors
+set t_Co=256
 
 " Jump to the last known cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -83,8 +88,8 @@ let g:tlTokenList = ['FIXME', 'TODO', 'CHANGED']
 " Highlight tabs and trailing spaces
 set list listchars=tab:»·,trail:·
 
-" Highlight lines longer than 78 chars
-match SpellRare '.\{78,\}'
+" Highlight lines longer than 80 chars
+match SpellRare '.\{80,\}'
 
 au BufWinEnter * let todo    = matchadd('Search', 'TODO', -1)
 au BufWinEnter * let fixme   = matchadd('Error', 'FIXME', -1)
