@@ -1,10 +1,5 @@
-[[ -d ~/bin ]] && export PATH=$PATH:~/bin
-
-# MacPorts
-if [ $(uname) == 'Darwin' ] && [ -d /opt/local ]; then
-    export PATH=$PATH:/opt/local/bin:/opt/local/sbin
-    export MANPATH=$MANPATH:/opt/local/share/man
-fi;
+# Personal bin
+[[ -d ~/bin ]] && export PATH=~/bin:$PATH
 
 # Bash completion
 if [ -f /opt/local/etc/bash_completion ]; then
@@ -21,8 +16,9 @@ if [ -d ~/bash ]; then
 fi
 
 # Prompt
-# cwd{red}(git_branch)>{/red}
-PS1="\w\[\e[1;31m\]\$(git_prompt)>\[\e[0m\] "
+if command -v show_prompt &> /dev/null; then
+    export PS1=$(show_prompt)
+fi
 
 # History
 export HISTCONTROL=erasedups:ignorespace
@@ -32,5 +28,4 @@ shopt -s histappend
 # Aliases
 alias info='info --vi-keys'
 alias ll='ls -al'
-alias pi='sudo port -v install'
 

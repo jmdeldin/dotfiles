@@ -1,0 +1,26 @@
+#!/bin/bash
+# MacPorts-specific config
+
+# Only run for MacPorts
+[[ ! -e /opt/local ]] && exit
+
+# Paths
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export MANPATH=/opt/local/share/man:$MANPATH
+
+# Use MacPorts' Apache instead of OS X's
+[[ -d /opt/local/apache2/bin ]] && export PATH=/opt/local/apache2/bin:$PATH
+
+# Remove the "5" from mysql5 commands
+# mysql5 => mysql
+if [ -f /opt/local/bin/mysql5 ]; then
+    for f in /opt/local/bin/mysql*; do
+        fname=${f##*/} # extract the filename
+        alias ${fname%5}=$f # rm the "5" for the alias
+    done
+fi
+
+# Specific aliases
+alias pi='sudo port -v install'
+alias pu='sudo port -d selfupdate'
+
