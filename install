@@ -1,13 +1,47 @@
-#/bin/bash
-# file:     install
-# desc:     Symlinks dotfiles to home directory
-# author:   Jon-Michael Deldin <dev@jmdeldin.com>
-# usage:    ./install
+#!/usr/bin/env python
+# file:   install
+# desc:   Symlinks dotfiles to $HOME
+# author: Jon-Michael Deldin <dev@jmdeldin.com>
+# usage:  ./install
 
-# get all dot files except for '.' and '..'
-for file in .*[^.]; do
-    if [[ ! $file == ".git" ]]; then
-        ln -s -i $(pwd)/${file} ~/${file}
-    fi
-done
+import os
+
+def main():
+    symlink_config('.', ['.git', '.gitignore'])
+
+def symlink_config(path, ignore):
+    """
+    Symlinks files found in `path` as long as they're not in `ignore`
+    """
+    # ignore this script
+    ignore.append(os.path.basename(__file__))
+
+    idx = os.listdir(path)
+    for f in idx:
+        # pop ignored files and continue
+        if ignore.__contains__(f):
+            idx.pop(idx.index(f))
+            continue
+        dest = os.path.join(os.environ['HOME'], f)
+        do_symlink(os.path.join(os.getcwd(), f), dest)
+
+def do_symlink(src, dest):
+    """
+    Prompts the user to replace `dest` with `src` if `dest` exists.
+    Equivalent to `ln -si`.
+    """
+    try:
+        print('%s -> %s' % (src, dest))
+        os.symlink(src, dest)
+    except OSError:
+        ask = raw_input('%s exists. Replace? [y/n]' % (os.path.basename(src)))
+        if ask == 'y':
+            os.remove(dest)
+            os.symlink(src, dest)
+        else:
+            print('Skipping %s' % (os.path.basename(src)))
+
+
+if __name__ == "__main__":
+    main()
 
