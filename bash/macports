@@ -2,7 +2,7 @@
 # MacPorts-specific config
 
 # Only run for MacPorts
-[[ ! -e /opt/local ]] && exit
+[[ ! -e /opt/local/etc/macports ]] && return
 
 # Paths
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
