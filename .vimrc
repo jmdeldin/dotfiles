@@ -25,7 +25,10 @@ runtime scripts/closetag.vim
 set modelines=5
 
 " 256 colors
-set t_Co=256
+if $TERM == 'xterm-256color'
+    set t_Co=256
+    colo xoria256
+endif
 
 " Jump to the last known cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
