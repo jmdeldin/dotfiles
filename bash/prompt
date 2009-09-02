@@ -35,6 +35,7 @@ function user_sigil {
 
 # Cobble the above functions together for PS1 usage; PS1 set in .bashrc
 function show_prompt {
-    echo "\w\[\e[1;31m\]\$(git_prompt) \$(user_sigil)\[\e[0m\] "
+    # {title=user@host} {cwd} {git_prompt}
+    echo "\[\e]2;\u@\h\a\w\[\e[1;31m\]\$(git_prompt) \$\[\e[0m\] "
 }
 
