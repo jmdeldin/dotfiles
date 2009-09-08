@@ -25,7 +25,7 @@ runtime scripts/closetag.vim
 set modelines=5
 
 " 256 colors
-if $TERM == 'xterm-256color'
+if $TERM == 'xterm-256color' || $TERM =~ 'screen'
     set t_Co=256
     colo xoria256
 endif
