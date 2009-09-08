@@ -24,18 +24,9 @@ function git_prompt {
     echo " ($p $s)"
 }
 
-# Display "#" for root/sudo and "$" for users
-function user_sigil {
-    if [ $UID -eq 0 ]; then
-        echo '#'
-    else
-        echo '$'
-    fi
-}
-
 # Cobble the above functions together for PS1 usage; PS1 set in .bashrc
 function show_prompt {
-    # {title=user@host} {cwd} {git_prompt}
-    echo "\[\e]2;\u@\h\a\w\[\e[1;31m\]\$(git_prompt) \$\[\e[0m\] "
+    # {title=user@host} {cwd} {git_prompt} {sigil}
+    echo "\[\033]0;\u@\h\007\]\w\[\e[1;31m\]\$(git_prompt) \\$\[\e[0m\] "
 }
 
