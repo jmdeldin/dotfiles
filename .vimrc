@@ -84,6 +84,9 @@ au bufwritepost $MYVIMRC source %
 " Tasklist plugin
 let g:tlTokenList = ['FIXME', 'TODO', 'CHANGED']
 
+" Add <> to matchpairs
+set matchpairs+=<:>
+
 
 """"""""""""""""""""""""""""""
 " Highlight-patterns
