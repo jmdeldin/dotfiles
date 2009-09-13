@@ -1,0 +1,3 @@
+[submodule ".vim/plugin/repeater"]
+	path = .vim/plugin/repeater
+	url = git://github.com/jmdeldin/repeater.git

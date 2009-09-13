@@ -71,6 +71,11 @@ delimitMateVisualWrapping	delimitMate.txt	/*delimitMateVisualWrapping*
 ds	surround.txt	/*ds*
 i_CTRL-G_S	surround.txt	/*i_CTRL-G_S*
 i_CTRL-G_s	surround.txt	/*i_CTRL-G_s*
+repeater-commands	repeater.txt	/*repeater-commands*
+repeater-contents	repeater.txt	/*repeater-contents*
+repeater-install	repeater.txt	/*repeater-install*
+repeater-usage	repeater.txt	/*repeater-usage*
+repeater.txt	repeater.txt	/*repeater.txt*
 surround	surround.txt	/*surround*
 surround-author	surround.txt	/*surround-author*
 surround-customizing	surround.txt	/*surround-customizing*
