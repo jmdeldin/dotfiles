@@ -12,7 +12,7 @@ endif
 
 let colors_name = "fruit"
 
-hi Normal       guifg=#404040 guibg=#f8f8f8
+hi Normal       guifg=#404040 guibg=#fdfdfd
 
 " Search
 hi IncSearch    gui=UNDERLINE guifg=#404040 guibg=#40ffff

@@ -10,8 +10,6 @@ func! GetOS()
     endif
 endfunc
 
-" Free range cursor
-set virtualedit=all
 
 """"""""""""""""""""""""""""""
 " Init
@@ -41,11 +39,15 @@ syn on
 set mouse=a
 set showcmd
 set ruler
+set nu
 set laststatus=2
 set wildmenu
 set wildmode=list:longest
 set wildignore=*.class
 set cursorline
+
+" Free range cursor
+set virtualedit=all
 
 " No bells
 set vb t_vb=
@@ -102,7 +104,7 @@ let g:netrw_list_hide = '^\.DS_Store$,^.*\.swp,^.git/$,^.*\.class$'
 set list listchars=tab:»·,trail:·
 
 " Highlight lines longer than 80 chars
-match SpellRare '.\{80,\}'
+match LineNr '.\{80,\}'
 
 au BufWinEnter * let todo    = matchadd('Search', 'TODO', -1)
 au BufWinEnter * let fixme   = matchadd('Error', 'FIXME', -1)
@@ -159,13 +161,14 @@ endif
 " gVim
 """"""""""""""""""""""""""""""
 if has('gui_running')
-    colo oceandeep
+    colo hornet
     " No toolbar
     set guioptions-=T
     if os == 'win'
         set gfn=Lucida_Console:h9:cANSI
     elseif os == 'mac'
         set fuoptions=maxvert,maxhorz
-        set gfn=Monaco:h12
+        set gfn=Monaco:h11
     endif
 endif
+
