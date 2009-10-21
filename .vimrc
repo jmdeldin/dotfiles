@@ -44,6 +44,7 @@ set ruler
 set laststatus=2
 set wildmenu
 set wildmode=list:longest
+set wildignore=*.class
 set cursorline
 
 " No bells
@@ -90,6 +91,10 @@ set matchpairs+=<:>
 " delimitMate - don't autoclose
 let g:delimitMate_autoclose = 0
 
+" ignore .DS_Store, .swp, .git/, and .class files in Netrw
+let g:netrw_list_hide = '^\.DS_Store$,^.*\.swp,^.git/$,^.*\.class$'
+
+
 """"""""""""""""""""""""""""""
 " Highlight-patterns
 """"""""""""""""""""""""""""""
@@ -107,9 +112,6 @@ au BufWinEnter * let changed = matchadd('Label', 'CHANGED', -1)
 """"""""""""""""""""""""""""""
 " Mappings
 """"""""""""""""""""""""""""""
-" Open VSTreeExplore
-nmap <leader>d :VSTreeExplore<CR>
-
 " Remove trailing spaces
 nmap <leader>D :exe '% s/\s\+$//e'<CR>
 
@@ -118,9 +120,6 @@ nmap <leader><Tab> :ToggleTab<CR>
 
 " Make
 nmap <leader>m :mak<CR><CR>
-
-" Rake
-nmap <leader>r :!rake<CR><CR>
 
 " Saving
 nmap <leader>s :w<CR>
@@ -170,4 +169,3 @@ if has('gui_running')
         set gfn=Monaco:h12
     endif
 endif
-
