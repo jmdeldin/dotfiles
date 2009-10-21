@@ -29,3 +29,23 @@ shopt -s histappend
 alias info='info --vi-keys'
 alias ll='ls -al'
 
+# options for `less` - convert raw color codes (for paging colorized output)
+export LESS="-R"
+
+# recursive egrep
+g(){
+    opts=""
+    # build exclude list
+    exclude=(.git .svn .hg .swp)
+    for f in ${exclude[*]}; do
+        opts="${opts} --exclude '$f'"
+    done
+
+    egrep ${opts} \
+         --before-context=5 --after-context=5 \
+         --color=always \
+         --recursive \
+         --line-number \
+         $*
+}
+
