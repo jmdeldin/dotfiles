@@ -1,12 +1,13 @@
 [user]
-	name = Jon-Michael Deldin
+	name  = Jon-Michael Deldin
 	email = dev@jmdeldin.com
 [alias]
 	ci = commit
 	co = checkout
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+	branch = always
+	diff   = always
+	status = always
 [merge]
 	tool = vimdiff
+
