@@ -87,6 +87,8 @@ let g:tlTokenList = ['FIXME', 'TODO', 'CHANGED']
 " Add <> to matchpairs
 set matchpairs+=<:>
 
+" delimitMate - don't autoclose
+let g:delimitMate_autoclose = 0
 
 """"""""""""""""""""""""""""""
 " Highlight-patterns
