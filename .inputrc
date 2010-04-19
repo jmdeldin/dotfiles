@@ -1,3 +1,9 @@
+# no bell
+set bell-style none
+
+# case-insensitive
+set completion-ignore-case on
+
 # no more double-tab to complete
 set show-all-if-ambiguous
 
