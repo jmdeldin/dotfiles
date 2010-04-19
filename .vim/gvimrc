@@ -1,0 +1,37 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Functions                                                               {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle fullscreen mode on Windows by simulating pressing Alt+Space+x/r
+function! ToggleFullscreen()
+    if g:fs == 0
+        let g:fs = 1
+        exe "simalt ~x"
+    else
+        let g:fs = 0
+        exe "simalt ~r"
+    endif
+endfunction
+let g:fs = 0
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" UI + Mappings                                                           {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set guioptions+=c                           " no popups
+set guioptions-=m                           " no menu
+set guioptions-=T                           " no toolbar
+set t_vb=                                   " no bells (again -- :h 'vb')
+
+
+if has('win32') || has('win64')
+    nmap <F11> :call ToggleFullscreen()<CR>
+elseif has('mac')
+    set fuoptions=maxvert,maxhorz           " fullscreen
+endif
+
+" System copy/paste
+vmap <leader>y "+y
+nmap <leader>p "+gP
+
+" vim: set foldmethod=marker:
+"

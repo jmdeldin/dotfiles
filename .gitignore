@@ -1,3 +1,9 @@
 .DS_Store
 .vimperator/info
-.vim/.netrwhist
+*.swp
+*.vba
+*.tgz
+*.tar*
+*.zip
+*.netrwhist
+*.VimballRecord

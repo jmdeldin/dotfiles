@@ -1,0 +1,14 @@
+The setup is fairly modular -- in $HOME/.vimrc, include the following:
+
+    " load the base vimrc"
+    so $HOME/.vim/vimrc
+
+    " vars for the auth; mapping
+    let full_name = 'Author Name'
+    let email = 'email@example.com'
+
+    " load the base gvimrc (this could also be done from ~/.gvimrc)
+    if has('gui_running')
+        so $HOME/.vim/gvimrc
+    endif
+
