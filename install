@@ -7,7 +7,7 @@
 import os
 
 def main():
-    symlink_config('.', ['.git', '.gitignore'])
+    symlink_config('.', ['.git', '.gitignore', '.DS_Store'])
 
 def symlink_config(path, ignore):
     """
