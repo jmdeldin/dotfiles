@@ -1,26 +1,56 @@
 #!/bin/bash
+#
 # MacPorts-specific config
+#
 
 # Only run for MacPorts
 [[ ! -e /opt/local/etc/macports ]] && return
 
-# Paths
+##############################################################################
+# Paths                                                                   {{{1
+##############################################################################
+
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+# add the "mysql5" commands without the "5"
+[[ -d /opt/local/lib/mysql5/bin ]] && export PATH=/opt/local/lib/mysql5/bin:$PATH
+
 export MANPATH=/opt/local/share/man:$MANPATH
 
 # Use MacPorts' Apache instead of OS X's
 [[ -d /opt/local/apache2/bin ]] && export PATH=/opt/local/apache2/bin:$PATH
 
-# Remove the "5" from mysql5 commands
-# mysql5 => mysql
-if [ -f /opt/local/bin/mysql5 ]; then
-    for f in /opt/local/bin/mysql*; do
-        fname=${f##*/} # extract the filename
-        alias ${fname%5}=$f # rm the "5" for the alias
-    done
-fi
+[[ -d ~/src ]] && export PYTHONPATH=~/src/:$PYTHONPATH
 
-# Specific aliases
+
+##############################################################################
+# Aliases                                                                 {{{1
+##############################################################################
+
+alias gvim='mvim'
+alias ls='gls --color'
 alias pi='sudo port -v install'
 alias pu='sudo port -d selfupdate'
+alias python3='python3.1'
+
+
+##############################################################################
+# Functions                                                               {{{1
+##############################################################################
+
+# http://www.macosxhints.com/article.php?story=20060719155640762
+# get the path of the topmost Finder window
+function ff {
+  osascript -e 'tell application "Finder"'\
+            -e "if (${1-1} <= (count Finder windows)) then"\
+            -e "get POSIX path of (target of window ${1-1} as alias)"\
+            -e 'else' -e 'get POSIX path of (desktop as alias)'\
+            -e 'end if' -e 'end tell'
+}
+
+function cdff {
+  cd "$(ff $@)"
+}
+
+# vim: set fdm=marker:
 
