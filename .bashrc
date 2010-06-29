@@ -2,9 +2,6 @@
 # Paths                                                                   {{{1
 ##############################################################################
 
-# Personal bin
-[[ -d ~/bin ]] && export PATH=~/bin:$PATH
-
 # Bash completion
 if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
