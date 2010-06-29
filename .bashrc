@@ -42,7 +42,11 @@ shopt -s nocaseglob
 # PS1
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
-export PS1="\n\[$whtblu\]\w\[$txtrst\] \[$txtred\]\$(__git_ps1 ':%s')\[$txtrst\]\n\[$txtred\]\\$ \[$txtrst\]"
+# if git is available, show the branch status in the prompt
+[[ $(command -v __git_ps1) ]] && \
+  g=" \$(__git_ps1 '(\[$txtred\]%s\[$txtrst\])')" || g=""
+export PS1="\n\h:\[$undblu\]\w\[$txtrst\]$g\n\[$txtred\]$ \[$txtrst\]"
+unset g
 
 # PS2 (continuation prompt)
 export PS2="\[$txtred\]>>> \[$txtrst\]"
