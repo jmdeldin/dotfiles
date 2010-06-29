@@ -7,7 +7,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
   . /opt/local/etc/bash_completion
 elif [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
-fi;
+fi
 
 # Load bash scripts
 if [ -d ~/bash ]; then
@@ -81,11 +81,35 @@ alias mysql='mysql --pager=less'
 alias ll='ls -l'
 alias lal='ls -al'
 
-# color ls output
-if [ $(uname) != 'Darwin' ]; then
-  alias ls='ls --color'
+# OS-specific
+if [[ $(uname) == "Darwin" ]]; then
+  # `gls` might not be available -- best not to clobber `ls`
+  [[ $(command -v gls) ]] && alias ls='gls --color=auto'
+  alias gvim='mvim'
+  alias pi='sudo port -v install'
+  alias pu='sudo port -d selfupdate'
+else
+  alias ls='ls --color=auto'
 fi
 
+
+##############################################################################
+# Functions                                                               {{{1
+##############################################################################
+
+# http://www.macosxhints.com/article.php?story=20060719155640762
+# get the path of the topmost Finder window
+function ff {
+  osascript -e 'tell application "Finder"'\
+            -e "if (${1-1} <= (count Finder windows)) then"\
+            -e "get POSIX path of (target of window ${1-1} as alias)"\
+            -e 'else' -e 'get POSIX path of (desktop as alias)'\
+            -e 'end if' -e 'end tell'
+}
+
+function cdff {
+  cd "$(ff $@)"
+}
 
 # vim: set fdm=marker:
 
