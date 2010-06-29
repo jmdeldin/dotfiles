@@ -4,7 +4,6 @@ ScriptId, Name,             Directory
 1243,     colo_desert256,   colors
 1677,     colo_twilight,    colors
 1778,     colo_wombat,      colors
-1802,     colo_eclipse,     colors
 1891,     colo_vividchalk,  colors
 2140,     colo_xoria256,    colors
 2340,     colo_molokai,     colors
@@ -26,3 +25,4 @@ ScriptId, Name,             Directory
 2332,     pathogen,         autoload
 2975,     fugitive,
 3066,     repeater,
+3132,     underwater-mod,   colors
