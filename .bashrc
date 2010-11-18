@@ -45,7 +45,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 # if git is available, show the branch status in the prompt
 [[ $(command -v __git_ps1) ]] && \
   g=" \$(__git_ps1 '(\[$txtred\]%s\[$txtrst\])')" || g=""
-export PS1="\n\h:\[$undblu\]\w\[$txtrst\]$g\n\[$txtred\]$ \[$txtrst\]"
+export PS1="\n\h:\[$undblu\]\w\[$txtrst\]$g\n\[$txtred\]\\$ \[$txtrst\]"
 unset g
 
 # PS2 (continuation prompt)
