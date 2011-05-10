@@ -25,13 +25,6 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;31'
 # MySQL prompt: user@database>
 export MYSQL_PS1="\u@\d> "
 
-# prevent incorrect line-wrapping when the terminal is resized
-# see: <http://forums.gentoo.org/viewtopic-t-112348-highlight-bash+wrap.html>
-shopt -s checkwinsize
-
-# case insensitive
-shopt -s nocaseglob
-
 # PS1
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -43,6 +36,18 @@ unset g
 
 # PS2 (continuation prompt)
 export PS2="\[$txtred\]>>> \[$txtrst\]"
+
+
+##############################################################################
+# OPTS                                                                    {{{1
+##############################################################################
+
+# prevent incorrect line-wrapping when the terminal is resized
+# see: <http://forums.gentoo.org/viewtopic-t-112348-highlight-bash+wrap.html>
+shopt -s checkwinsize
+
+# case insensitive
+shopt -s nocaseglob
 
 
 ##############################################################################
