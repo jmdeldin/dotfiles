@@ -4,10 +4,11 @@
 [alias]
 	ci = commit
 	co = checkout
+	s  = status
 [color]
-	branch = always
-	diff   = always
-	status = always
+	branch = auto
+	diff   = auto
+	status = auto
 [merge]
 	tool = vimdiff
 
