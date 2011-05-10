@@ -108,5 +108,11 @@ function cdff {
   cd "$(ff $@)"
 }
 
+# create a directory and cd into it
+function mkcd {
+  mkdir -p "$*" && cd "$*"
+}
+
+
 # vim: set fdm=marker:
 
