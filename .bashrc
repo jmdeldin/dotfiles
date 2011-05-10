@@ -9,13 +9,6 @@ elif [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 fi
 
-# Load bash scripts
-if [ -d ~/bash ]; then
-  for f in ~/bash/*; do
-    . $f
-  done
-fi
-
 
 ##############################################################################
 # ENV                                                                     {{{1
