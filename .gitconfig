@@ -12,3 +12,5 @@
 [merge]
 	tool = vimdiff
 
+[core]
+	excludesfile = /Users/jmdeldin/.gitignore
