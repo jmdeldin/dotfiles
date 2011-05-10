@@ -49,6 +49,9 @@ shopt -s checkwinsize
 # case insensitive
 shopt -s nocaseglob
 
+# recursive glob
+[[ $(echo $BASH_VERSION | grep -q '^4' ) ]] && shopt -s globstar
+
 
 ##############################################################################
 # History                                                                 {{{1
