@@ -28,6 +28,8 @@ export MYSQL_PS1="\u@\d> "
 # PS1
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
+txtred=$(tput setaf 1)
+txtrst=$(tput sgr0)
 # if git is available, show the branch status in the prompt
 [[ $(command -v __git_ps1) ]] && \
   g=" \$(__git_ps1 '(\[$txtred\]%s\[$txtrst\])')" || g=""
