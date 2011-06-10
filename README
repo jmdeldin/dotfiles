@@ -1,0 +1,15 @@
+= Dotfiles
+
+These are my personal configuration files. Feel free to pilfer.
+
+= Installation
+
+Use XStow to prevent $HOME/.git from being created.
+
+  $ git clone git://github.com/jmdeldin/dotfiles.git ~/etc
+  $ xstow -v 1 -t $HOME -ire '.git$|.gitignore|.DS_Store|README' ~/etc
+
+= Uninstallation
+
+  $ xstow -v 1 -target $HOME -delete ~/etc
+
