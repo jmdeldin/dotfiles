@@ -126,6 +126,7 @@ nmap <leader><Tab> :call ToggleTab()<CR>
 " Perform inline-calculations (e.g., type 2+2<C-a>)
 ino <C-a> <C-o>yiW<End>=<C-r>=<C-r>0<CR>
 
+nmap <leader>l :IndentGuidesToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abbreviations                                                           {{{1
