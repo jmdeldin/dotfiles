@@ -143,9 +143,11 @@ let email     = ""          " user email
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gvim                                                                    {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let gvim_rc = $HOME . "/.vim/gvimrc"
-if filereadable(gvim_rc)
+if has('gui_running')
+  let gvim_rc = $HOME . "/.vim/gvimrc"
+  if filereadable(gvim_rc)
     execute ":source " . gvim_rc
+  endif
 endif
 
 
