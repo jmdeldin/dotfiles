@@ -76,12 +76,6 @@ set runtimepath+=$HOME/.vim/bundle/pathogen
 call pathogen#runtime_append_all_bundles()"
 call pathogen#helptags()
 
-" Supertab
-set omnifunc=syntaxcomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<C-x><C-o>"
-let g:SuperTabLongestHighlight = 1
-
 " insert a space for each comment
 let NERDSpaceDelims = 1
 

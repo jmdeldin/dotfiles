@@ -17,7 +17,6 @@ ScriptId, Name,             Directory
 1218,     NERD_commenter,
 1491,     javascript,       syntax
 1571,     php,
-1643,     SuperTab,
 1697,     surround,
 1849,     autoclose,        plugin
 2075,     html,             indent
