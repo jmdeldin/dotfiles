@@ -14,5 +14,9 @@ paths="\
 for p in $paths; do [[ -d $p ]] && export PATH=$p:$PATH; done
 unset paths p
 
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 # source the bashrc if it's an interactive shell
 [[ -n "$PS1" && -f .bashrc ]] && . .bashrc
+
