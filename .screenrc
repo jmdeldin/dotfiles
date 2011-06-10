@@ -17,3 +17,6 @@ defscrollback 5000
 # [n screen-title] [...]             [hh:mm]
 hardstatus alwayslastline " %w %=%c "
 
+# scrollback in terminal emulator
+termcapinfo xterm* ti@:te@
+
