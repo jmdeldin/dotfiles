@@ -85,6 +85,7 @@ let php_htmlInStrings = 1 " highlight HTML inside strings
 let php_baselib = 1       " highlight std PHP funcs 
 let php_folding = 1       " fold classes and functions
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions                                                               {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -107,6 +108,9 @@ autocmd FileType sh,ruby setlocal sts=2 sw=2 et
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings                                                                {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let mapleader = ","
+
 " Remove trailing spaces
 nmap <leader>D :exe '% s/\s\+$//e'<CR>
 
