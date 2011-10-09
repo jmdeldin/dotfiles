@@ -1,0 +1,11 @@
+# .editrc -- used by libedit (non-GPL readline clone)
+
+# vi-keys
+bind -v
+
+# C-l to clear screen
+bind ^L ed-clear-screen
+
+# TAB to auto-complete in IRB and other tools
+bind \\t rl_complete
+
