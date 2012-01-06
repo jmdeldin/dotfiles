@@ -11,3 +11,4 @@ require 'irb/completion'
   end
 end
 
+$LOAD_PATH.unshift '.'
