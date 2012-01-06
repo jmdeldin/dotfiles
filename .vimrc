@@ -67,39 +67,6 @@ set hlsearch                " highlight search results
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins                                                                 {{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype plugin indent on
-
-" pathogen
-set runtimepath+=$HOME/.vim/bundle/pathogen
-call pathogen#runtime_append_all_bundles()"
-call pathogen#helptags()
-
-" insert a space for each comment
-let NERDSpaceDelims = 1
-
-" PHP syntax
-let php_sql_query = 1     " highlight SQL inside strings
-let php_htmlInStrings = 1 " highlight HTML inside strings
-let php_baselib = 1       " highlight std PHP funcs 
-let php_folding = 1       " fold classes and functions
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Functions                                                               {{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Toggle soft and hard tabs
-function! ToggleTab()
-    if &expandtab
-        set noexpandtab
-    else
-        set expandtab
-    endif
-endfun
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetypes                                                               {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType sh,ruby setlocal sts=2 sw=2 et
@@ -134,27 +101,4 @@ nmap <leader>l :IndentGuidesToggle<CR>
 " YYYY-MM-DD HH-MM TZ
 iab isoD <C-R>=strftime('%Y-%m-%d %H:%m %z')<CR>
 
-" Author <email>
-iab auth; <C-R>=full_name . " <" . email . ">"<CR>
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" User                                                                    {{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let full_name = ""          " full user name
-let email     = ""          " user email
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" gvim                                                                    {{{1
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has('gui_running')
-  let gvim_rc = $HOME . "/.vim/gvimrc"
-  if filereadable(gvim_rc)
-    execute ":source " . gvim_rc
-  endif
-endif
-
-
 " vim: set foldmethod=marker:
-
