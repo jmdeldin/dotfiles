@@ -4,12 +4,11 @@ These are my personal configuration files. Feel free to pilfer.
 
 = Installation
 
-Use XStow to prevent $HOME/.git from being created.
+Use GNU Stow (or manually symlink):
 
   $ git clone git://github.com/jmdeldin/dotfiles.git ~/etc
-  $ xstow -v 1 -t $HOME -ire '.git$|.gitignore|.DS_Store|README' ~/etc
+  $ stow -S etc -t $HOME -v --ignore='README'
 
 = Uninstallation
 
-  $ xstow -v 1 -target $HOME -delete ~/etc
-
+  $ stow -D etc -t $HOME -v
