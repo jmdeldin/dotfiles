@@ -1,3 +1,6 @@
+# change the escape key (Ctrl+[)
+escape ^[[
+
 # screen commands
 autodetach on
 
