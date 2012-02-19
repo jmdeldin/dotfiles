@@ -1,5 +1,5 @@
-# change the escape key (Ctrl+[)
-escape ^[[
+# change the escape key (Ctrl+O)
+escape ^Oo
 
 # screen commands
 autodetach on
@@ -22,4 +22,3 @@ hardstatus alwayslastline " %w %=%c "
 
 # scrollback in terminal emulator
 termcapinfo xterm* ti@:te@
-
