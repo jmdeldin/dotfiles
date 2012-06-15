@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 ################################################################# FUNCTIONS
 
 # http://www.macosxhints.com/article.php?story=20060719155640762
@@ -29,8 +27,7 @@ function popular {
 function dots { ls -a $@ | egrep '^\.\w+$' }
 
 ################################################################# ENV
-export PATH=~/bin:~/.rbenv/shims:~/opt/bin:$PATH
-export PERL5LIB=~/perl5/lib/perl5:$PERL5LIB
+export PATH=~/bin:~/opt/Cellar/ruby/bin:~/opt/bin:$PATH
 export HISTSIZE=100000
 export SAVEHIST=100000
 export HISTFILE=~/.zhistory
