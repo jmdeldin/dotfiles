@@ -44,6 +44,7 @@ if [[ $OSTYPE =~ "darwin" ]]; then
     type gls > /dev/null && alias ls='gls --color=auto'
     alias bat='pmset -g ps'
     alias nosleep='time pmset noidle'
+    alias e="open -a Emacs"
 else
     alias ls='ls --color=auto'
 fi
