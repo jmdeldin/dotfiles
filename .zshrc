@@ -27,7 +27,6 @@ function popular {
 function dots { ls -a $@ | egrep '^\.\w+$' }
 
 ################################################################# ENV
-export PATH=~/bin:~/opt/Cellar/ruby/bin:~/opt/bin:$PATH
 export HISTSIZE=100000
 export SAVEHIST=100000
 export HISTFILE=~/.zhistory
