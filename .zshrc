@@ -12,10 +12,6 @@ function ff {
 }
 
 function cdff { cd "$(ff $@)" }
-
-function mkcd { mkdir -p "$*" && cd "$*" }
-
-
 function dots { ls -a $@ | egrep '^\.\w+$' }
 
 ################################################################# ENV
