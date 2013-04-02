@@ -63,9 +63,6 @@ autoload -U colors && colors
 autoload -Uz vcs_info
 setopt prompt_subst # so we can use ${vcs_info_msg_0_} in the prompt
 zstyle ':vcs_info:*' disable bzr cdv cvs darcs fossil hg mtn p4 svk svn tla
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' stagedstr "%{$fg[yellow]%}●"
-zstyle ':vcs_info:*' unstagedstr "%{$fg[red]%}∆"
 zstyle ':vcs_info:*' formats "%{$fg[green]%}%b%c%u% "
 
 precmd () { vcs_info }
