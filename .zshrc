@@ -57,15 +57,14 @@ setopt extendedhistory                                    # save the date
 setopt inc_append_history                                 # append to HISTFILE
 
 ################################################################# PROMPT
-# ~/path/to/dir % ls -al                     branch[status] [exit status]
+# ~/path/to/dir % ls -al                            branch [exit status]
 
-autoload -U colors && colors
 autoload -Uz vcs_info
-setopt prompt_subst # so we can use ${vcs_info_msg_0_} in the prompt
+setopt prompt_subst
 zstyle ':vcs_info:*' disable bzr cdv cvs darcs fossil hg mtn p4 svk svn tla
-zstyle ':vcs_info:*' formats "%{$fg[green]%}%b%c%u% "
+zstyle ':vcs_info:*' formats "%b" # just the branch
 
 precmd () { vcs_info }
 
-PROMPT='%~ %{$fg[red]%}%#%{$reset_color%} '
-RPROMPT='${vcs_info_msg_0_} %(?/%{$fg[green]%}o/%{$fg[red]%}x)%{$reset_color%}'
+PROMPT='%~ %F{red}%#%f '
+RPROMPT='%F{green}${vcs_info_msg_0_}%f %(?/%F{green}o/%F{red}x)%f'
