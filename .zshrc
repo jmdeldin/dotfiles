@@ -38,13 +38,7 @@ export MYSQL_PS1="\u@\d> " # MySQL prompt: user@database>
 alias ll='ls -l'
 alias killfirst='sed "1d"'
 
-if [[ $OSTYPE =~ "darwin" ]]; then
-  # `gls` might not be available -- best not to clobber `ls`
-    type gls > /dev/null && alias ls='gls --color=auto'
-    alias bat='pmset -g ps'
-    alias nosleep='time pmset noidle'
-    alias e="open -a Emacs"
-else
+if [[ $OSTYPE =~ "linux" ]]; then
     alias ls='ls --color=auto'
 fi
 
