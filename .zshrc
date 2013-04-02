@@ -15,14 +15,6 @@ function cdff { cd "$(ff $@)" }
 
 function mkcd { mkdir -p "$*" && cd "$*" }
 
-function popular {
-    grep -v '^#' "$HISTFILE" |
-    awk '{print $1}'         |
-    sort                     |
-    uniq -c                  |
-    sort -rn                 |
-    head -20
-}
 
 function dots { ls -a $@ | egrep '^\.\w+$' }
 
