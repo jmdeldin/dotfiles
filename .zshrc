@@ -1,5 +1,4 @@
 ################################################################# FUNCTIONS
-
 # http://www.macosxhints.com/article.php?story=20060719155640762
 # get the path of the topmost Finder window
 function ff {
@@ -12,7 +11,6 @@ function ff {
 }
 
 function cdff { cd "$(ff $@)" }
-function dots { ls -a $@ | egrep '^\.\w+$' }
 
 ################################################################# ENV
 export HISTSIZE=100000
