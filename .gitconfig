@@ -13,4 +13,4 @@
 	tool = vimdiff
 
 [core]
-	excludesfile = /Users/jmdeldin/.gitignore
+	excludesfile = ~/.gitignore
