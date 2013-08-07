@@ -35,6 +35,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case-insensitive
 setopt autocd                                             # `~/d` == `cd ~/d`
 setopt extendedhistory                                    # save the date
 setopt inc_append_history                                 # append to HISTFILE
+setopt histignorespace                                    # don't log ` cmd`
 
 ################################################################# PROMPT
 # ~/path/to/dir % ls -al                            branch [exit status]
