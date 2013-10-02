@@ -13,6 +13,7 @@ function ff {
 function cdff { cd "$(ff $@)" }
 
 ################################################################# ENV
+export EDITOR=vim
 export HISTSIZE=100000
 export SAVEHIST=100000
 export HISTFILE=~/.zhistory
@@ -36,6 +37,7 @@ setopt autocd                                             # `~/d` == `cd ~/d`
 setopt extendedhistory                                    # save the date
 setopt inc_append_history                                 # append to HISTFILE
 setopt histignorespace                                    # don't log ` cmd`
+bindkey -e                                                # use emacs keys
 
 ################################################################# PROMPT
 # ~/path/to/dir % ls -al                            branch [exit status]
