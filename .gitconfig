@@ -2,9 +2,13 @@
 	name  = Jon-Michael Deldin
 	email = dev@jmdeldin.com
 [alias]
+  c  = checkout --
 	ci = commit
 	co = checkout
+  clf = clean -f
 	s  = status
+  rhh = reset --hard HEAD
+  rh = reset HEAD
 [color]
 	branch = auto
 	diff   = auto
