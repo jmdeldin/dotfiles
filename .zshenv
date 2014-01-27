@@ -1,2 +1,1 @@
-export PATH=$HOME/bin:$HOME/.rvm/bin:$PATH
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH=$HOME/bin:$HOME/.gem/ruby/2.1.0/bin:$PATH
