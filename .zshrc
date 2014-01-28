@@ -16,6 +16,7 @@ export MYSQL_PS1="\u@\d> " # MySQL prompt: user@database>
 ################################################################# ALIASES
 alias ll='ls -l'
 alias killfirst='sed "1d"'
+alias cl='cd ~/src/theclymb'
 
 if [[ $OSTYPE =~ "linux" ]]; then
     alias ls='ls --color=auto'
