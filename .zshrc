@@ -30,6 +30,7 @@ setopt autocd                                             # `~/d` == `cd ~/d`
 setopt extendedhistory                                    # save the date
 setopt inc_append_history                                 # append to HISTFILE
 setopt histignorespace                                    # don't log ` cmd`
+setopt share_history                                      # share w/active terms
 bindkey -e                                                # use emacs keys
 
 ################################################################# PROMPT
