@@ -4,6 +4,10 @@ function e {
     disown
 }
 
+function pbcopy {
+    xsel -i -b
+}
+
 ################################################################# ENV
 export EDITOR=vim
 export HISTSIZE=100000
