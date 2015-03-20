@@ -9,7 +9,7 @@ function pbcopy {
 }
 
 ################################################################# ENV
-export EDITOR=vim
+export EDITOR=emacsclient
 export HISTSIZE=100000
 export SAVEHIST=100000
 export HISTFILE=~/.zhistory
