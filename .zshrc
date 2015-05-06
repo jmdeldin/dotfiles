@@ -10,8 +10,8 @@ function pbcopy {
 
 ################################################################# ENV
 export EDITOR=emacsclient
-export HISTSIZE=100000
-export SAVEHIST=100000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 export HISTFILE=~/.zhistory
 export LESS="-R" # convert raw color codes for paging colors
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;31'
