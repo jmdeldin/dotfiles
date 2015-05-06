@@ -18,6 +18,7 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='1;31'
 export MYSQL_PS1="\u@\d> " # MySQL prompt: user@database>
 
 ################################################################# ALIASES
+alias be='bundle exec'
 alias ll='ls -l'
 alias killfirst='sed "1d"'
 alias cl='cd ~/src/theclymb'
