@@ -21,8 +21,7 @@ export MYSQL_PS1="\u@\d> " # MySQL prompt: user@database>
 alias be='bundle exec'
 alias ll='ls -l'
 alias killfirst='sed "1d"'
-alias cl='cd ~/src/theclymb'
-alias ms='cd ~/src/machine_setup'
+alias now='cd ~/now'
 
 if [[ $OSTYPE =~ "linux" ]]; then
     alias ls='ls --color=auto'
