@@ -10,7 +10,8 @@
   rhh = reset --hard HEAD
   rh = reset HEAD
 	lprune = !git branch --merged | grep -v '^.* master$' | xargs git branch -d
-  #rprune = !git branch -r --merged | grep -v master | sed "s,origin/,," | xargs -n 1 git push --delete origin
+  rprune = fetch origin --prune
+  rrprune = !git branch -r --merged | grep -v master | sed "s,origin/,," | xargs -n 1 git push --delete origin
 [color]
 	branch = auto
 	diff   = auto
