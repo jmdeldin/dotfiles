@@ -8,6 +8,10 @@ function pbcopy {
     xsel -i -b
 }
 
+function pbpaste {
+    xsel -o
+}
+
 ################################################################# ENV
 export EDITOR=emacsclient
 export HISTSIZE=1000000
