@@ -1,23 +1,20 @@
 [user]
-	name  = Jon-Michael Deldin
+	name	= Jon-Michael Deldin
 	email = dev@jmdeldin.com
+
 [alias]
-  c  = checkout --
 	ci = commit
 	co = checkout
-  clf = clean -f
-	s  = status
-  rhh = reset --hard HEAD
-  rh = reset HEAD
+	s = status
+	rhh = reset --hard HEAD
 	lprune = !git branch --merged | grep -v '^.* master$' | xargs git branch -d
-  rprune = fetch origin --prune
-  rrprune = !git branch -r --merged | grep -v master | sed "s,origin/,," | xargs -n 1 git push --delete origin
+	rprune = fetch origin --prune
+	rrprune = !git branch -r --merged | grep -v master | sed "s,origin/,," | xargs -n 1 git push --delete origin
+
 [color]
 	branch = auto
-	diff   = auto
+	diff = auto
 	status = auto
-[merge]
-	tool = vimdiff
 
 [core]
 	excludesfile = ~/.gitignore
