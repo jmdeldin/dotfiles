@@ -12,6 +12,10 @@ function pbpaste {
     xsel -o
 }
 
+function fuck_this_track {
+    beet rm -d "title:$(mpc -f "%title%" | head -1)"
+}
+
 ################################################################# ENV
 export EDITOR=emacsclient
 export HISTSIZE=1000000
