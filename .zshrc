@@ -13,7 +13,8 @@ function pbpaste {
 }
 
 function fuck_this_track {
-    beet rm -d "title:$(mpc -f "%title%" | head -1)"
+    q=$(mpc -f "artist:'%artist%' title:'%title%'" | head -1 | tr -d "\n")
+    eval "beet rm -d $q"
 }
 
 ################################################################# ENV
