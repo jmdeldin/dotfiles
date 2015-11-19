@@ -23,7 +23,6 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 export HISTFILE=~/.zhistory
 export LESS="-R" # convert raw color codes for paging colors
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;31'
 export MYSQL_PS1="\u@\d> " # MySQL prompt: user@database>
 
 ################################################################# ALIASES
@@ -31,6 +30,7 @@ alias be='bundle exec'
 alias ll='ls -l'
 alias killfirst='sed "1d"'
 alias now='cd ~/now'
+alias grep='grep --color=auto'
 
 if [[ $OSTYPE =~ "linux" ]]; then
     alias ls='ls --color=auto'
