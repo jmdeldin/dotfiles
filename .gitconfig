@@ -5,6 +5,7 @@
 [alias]
 	ci = commit
 	co = checkout
+	p = pull --rebase
 	s = status
 	rhh = reset --hard HEAD
 	lprune = !git branch --merged | grep -v '^.* master$' | xargs git branch -d
