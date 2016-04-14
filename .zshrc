@@ -17,6 +17,16 @@ function fuck_this_track {
     eval "beet rm -d $q"
 }
 
+function setup_prompt {
+    PROMPT='%~ %F{red}%#%f '
+    RPROMPT='%F{green}${vcs_info_msg_0_}%f %(?/%F{green}o/%F{red}x)%f'
+}
+
+function clean_prompt {
+    PROMPT='%% '
+    RPROMPT=''
+}
+
 ################################################################# ENV
 export EDITOR=emacsclient
 export HISTSIZE=1000000
@@ -57,8 +67,9 @@ zstyle ':vcs_info:*' formats "%b" # just the branch
 
 precmd () { vcs_info }
 
-PROMPT='%~ %F{red}%#%f '
-RPROMPT='%F{green}${vcs_info_msg_0_}%f %(?/%F{green}o/%F{red}x)%f'
 if [ $TERM = "dumb" ]; then
     unset zle_bracketed_paste # prevent ^[[2004h from showing up in emacs shell
 fi
+
+setup_prompt
+
