@@ -1,6 +1,7 @@
 [user]
 	name	= Jon-Michael Deldin
 	email = dev@jmdeldin.com
+	signingkey = B13EE2CE
 
 [alias]
 	ci = commit
@@ -19,3 +20,6 @@
 
 [core]
 	excludesfile = ~/.gitignore
+
+[commit]
+	gpgsign = true
