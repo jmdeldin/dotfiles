@@ -59,3 +59,6 @@ precmd () { vcs_info }
 
 PROMPT='%~ %F{red}%#%f '
 RPROMPT='%F{green}${vcs_info_msg_0_}%f %(?/%F{green}o/%F{red}x)%f'
+if [ $TERM = "dumb" ]; then
+    unset zle_bracketed_paste # prevent ^[[2004h from showing up in emacs shell
+fi
