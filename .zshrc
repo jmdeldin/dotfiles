@@ -4,13 +4,17 @@ function e {
     disown
 }
 
-function pbcopy {
-    xsel -i -b
-}
+if ! which pbcopy > /dev/null; then
+    function pbcopy {
+        xsel -i -b
+    }
+fi
 
-function pbpaste {
-    xsel -o
-}
+if ! which pbpaste > /dev/null; then
+    function pbpaste {
+        xsel -o
+    }
+fi
 
 function fuck_this_track {
     q=$(mpc -f "artist:'%artist%' title:'%title%'" | head -1 | tr -d "\n")
@@ -72,4 +76,3 @@ if [ $TERM = "dumb" ]; then
 fi
 
 setup_prompt
-
