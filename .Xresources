@@ -1,0 +1,68 @@
+!
+! rxvt-unicode terminal configuration
+!
+! Reload with `xrdb -merge ~/.Xresources`
+!
+! I have a few terminal "themes" configured, all launched via different
+! keybindings in the i3 window manager.
+!
+! URxvt (default): an Acme-like editor with black text on a yellow background
+! DarkTerm:  light text on dark background
+! LightTerm: dark text on light background
+
+URxvt*termName: xterm-256color
+URxvt*scrollBar: false
+URxvt*urlLauncher: xdg-open
+URxvt*matcher.button: 1
+
+URxvt*font: xft:Source Code Pro Semibold:pixelsize=18
+URxvt.letterSpace: -1
+! Shrink the font with Meta-Ctrl-1
+URxvt.keysym.M-C-1: command:\033]710;8x13\007\033]711;8x13\007
+
+! disable perl extensions
+URxvt*perl-ext:
+URxvt*perl-ext-common:
+
+URxvt*foreground:     #000000
+URxvt*background:     #FFFFDD
+DarkTerm*background:  #2B2B2B
+DarkTerm*foreground:  #DEDEDE
+LightTerm*background: #FFFFFF
+LightTerm*foreground: #000000
+
+! black
+DarkTerm*color0:  #2E3436
+DarkTerm*color8:  #555753
+! red
+DarkTerm*color1:  #CC0000
+DarkTerm*color9:  #EF2929
+! green
+DarkTerm*color2:  #4E9A06
+DarkTerm*color10: #8AE234
+! yellow
+DarkTerm*color3:  #C4A000
+DarkTerm*color11: #FCE94F
+! blue
+DarkTerm*color4:  #3465A4
+DarkTerm*color12: #729FCF
+! magenta
+DarkTerm*color5:  #75507B
+DarkTerm*color13: #AD7FA8
+! cyan
+DarkTerm*color6:  #06989A
+DarkTerm*color14: #34E2E2
+! white
+DarkTerm*color7:  #D3D7CF
+DarkTerm*color15: #EEEEEC
+
+!
+! Font configuration
+!
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault

@@ -1,0 +1,11 @@
+# -*- mode: sh -*-
+trackpad_id=$(xinput --list | grep TouchPad | sed 's/.*id=\([0-9]*\).*/\1/')
+
+# horizontal scrolling
+xinput --set-prop $trackpad_id "Synaptics Two-Finger Scrolling" 1 1
+
+# decrease sensitivity
+xinput --set-prop $trackpad_id "Synaptics Finger" 25 65 255
+
+# natural scrolling
+xinput set-button-map 4 1 2 3 5 4
