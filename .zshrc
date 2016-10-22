@@ -31,6 +31,11 @@ function clean_prompt {
     RPROMPT=''
 }
 
+function setup_ssh {
+    eval `ssh-agent`
+    ssh-add
+}
+
 ################################################################# ENV
 export EDITOR=emacsclient
 export HISTSIZE=1000000
