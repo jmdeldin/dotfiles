@@ -37,6 +37,7 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 export HISTFILE=~/.zhistory
 export LESS="-R" # convert raw color codes for paging colors
+export LESSHISTFILE=/dev/null # disable less history
 export MYSQL_PS1="\u@\d> " # MySQL prompt: user@database>
 
 ################################################################# ALIASES
