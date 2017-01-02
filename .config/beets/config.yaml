@@ -1,4 +1,12 @@
 directory: ~/Music
-library: ~/.config/beets/music.blb
+library: ~/Music/library.sqlite3
 import:
+  autotag: no
+  link: no
+  copy: no
+  write: yes
   move: yes
+sort_case_insensitive: no
+ui:
+  color: yes
+threaded: yes
