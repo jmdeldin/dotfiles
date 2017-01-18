@@ -36,6 +36,11 @@ function setup_ssh {
     ssh-add
 }
 
+function screenshot {
+    id=$(xwininfo | fgrep 'Window id' | awk '{print $4}')
+    import -window "$id" "$1"
+}
+
 ################################################################# ENV
 export EDITOR=emacsclient
 export HISTSIZE=1000000
