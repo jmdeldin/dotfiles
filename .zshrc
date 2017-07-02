@@ -36,6 +36,10 @@ function screenshot {
     import -window "$id" "$1"
 }
 
+function iv {
+    feh --cache-thumbnails --fullscreen --auto-zoom --auto-rotate --borderless --draw-tinted --draw-exif --draw-filename $*
+}
+
 ################################################################# ENV
 export EDITOR=emacsclient
 export HISTSIZE=1000000
