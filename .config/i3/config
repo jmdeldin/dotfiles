@@ -4,7 +4,6 @@
 
 set $mod Mod4
 
-
 # no borders between windows
 hide_edge_borders both
 
@@ -106,6 +105,10 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# screenshots
+bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_$wx$h.png' -e 'mkdir -p /tmp/screenshots && mv $f /tmp/screenshots/'
+bindsym --release Shift+Print exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h.png' -e 'mkdir -p /tmp/screenshots && mv $f /tmp/screenshots/'
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
