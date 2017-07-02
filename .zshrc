@@ -16,11 +16,6 @@ if ! which pbpaste > /dev/null; then
     }
 fi
 
-function fuck_this_track {
-    q=$(mpc -f "artist:'%artist%' title:'%title%'" | head -1 | tr -d "\n")
-    eval "beet rm -d $q"
-}
-
 function setup_prompt {
     PROMPT='%~ %F{red}%#%f '
     RPROMPT='%F{green}${vcs_info_msg_0_}%f %(?/%F{green}o/%F{red}x)%f'
@@ -56,6 +51,7 @@ alias ll='ls -l'
 alias killfirst='sed "1d"'
 alias now='cd ~/now'
 alias grep='grep --color=auto'
+alias fuck_this_track='~/bin/remove_track'
 
 if [[ $OSTYPE =~ "linux" ]]; then
     alias ls='ls --color=auto'
