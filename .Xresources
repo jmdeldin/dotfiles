@@ -17,8 +17,6 @@ URxvt*matcher.button: 1
 
 URxvt*font: xft:Source Code Pro Semibold:pixelsize=18
 URxvt.letterSpace: -1
-! Shrink the font with Meta-Ctrl-1
-URxvt.keysym.M-C-1: command:\033]710;8x13\007\033]711;8x13\007
 
 ! disable perl extensions
 URxvt*perl-ext:
