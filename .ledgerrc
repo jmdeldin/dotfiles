@@ -1,4 +1,4 @@
 --strict
 --explicit
 --pedantic
---date-format %Y-%m-%d
+--date-format %Y/%m/%d
