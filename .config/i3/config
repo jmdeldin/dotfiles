@@ -12,7 +12,7 @@ new_window none
 for_window [class="urxvt"] border pixel 10
 
 # font for titles
-font pango:Ubuntu 5
+font pango:Ubuntu 11
 
 bar {
   status_command i3status
@@ -165,7 +165,5 @@ exec --no-startup-id compton --inactive-dim 0.1 -b
 # background wallpaper
 exec --no-startup-id feh --bg-scale --no-fehbg ~/.config/wallpaper
 
-# TODO: execute something like this for trackpad sensitivity (probably in xprofile?)
-# syndaemon -i 0.5 -t -K -R &
-exec xrandr --dpi 209.8
-exec xmodmap ~/.Xmodmap
+# xmodmap is overriden if placed in xinitrc
+exec --no-startup-id xmodmap ~/.Xmodmap
