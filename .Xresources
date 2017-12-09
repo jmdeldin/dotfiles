@@ -25,7 +25,7 @@ URxvt*perl-ext-common:
 URxvt*foreground:     #000000
 URxvt*background:     #FFFFDD
 DarkTerm*background:  #2B2B2B
-DarkTerm*foreground:  #DEDEDE
+DarkTerm*foreground:  #EEEEEE
 LightTerm*background: #FFFFFF
 LightTerm*foreground: #000000
 
