@@ -153,10 +153,10 @@ bindsym XF86Explorer exec --no-startup-id firejail firefox -no-remote -profile ~
 bindsym $mod+XF86Explorer exec --no-startup-id firejail firefox -no-remote -profile ~/.mozilla/firefox/shopping
 
 # backlight
-bindsym XF86MonBrightnessUp exec sudo /usr/local/bin/backlight display +100
-bindsym $mod+XF86MonBrightnessUp exec sudo /usr/local/bin/backlight keyboard +1
-bindsym XF86MonBrightnessDown exec sudo /usr/local/bin/backlight display -100
-bindsym $mod+XF86MonBrightnessDown exec sudo /usr/local/bin/backlight keyboard -1
+bindsym XF86MonBrightnessUp exec sudo /home/jm/bin/iggy display +100
+bindsym $mod+XF86MonBrightnessUp exec sudo /home/jm/bin/iggy keyboard +1
+bindsym XF86MonBrightnessDown exec sudo /home/jm/bin/iggy display -100
+bindsym $mod+XF86MonBrightnessDown exec sudo /home/jm/bin/iggy keyboard -1
 
 # start compton (a compositor, which handles video much better than without
 # one)
