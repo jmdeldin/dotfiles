@@ -163,7 +163,7 @@ bindsym $mod+XF86MonBrightnessDown exec sudo /home/jm/bin/iggy keyboard -1
 exec --no-startup-id compton --inactive-dim 0.1 -b
 
 # background wallpaper
-exec --no-startup-id feh --bg-scale --no-fehbg ~/.config/wallpaper
+exec --no-startup-id feh --bg-scale $(find ~/Pictures/walls/ -type l -o -type f | shuf | head -1)
 
 # xmodmap is overriden if placed in xinitrc
 exec --no-startup-id xmodmap ~/.Xmodmap
