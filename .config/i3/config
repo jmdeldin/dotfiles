@@ -150,8 +150,8 @@ bindsym XF86Tools exec --no-startup-id emacs
 bindsym XF86Search exec --no-startup-id firejail firefox -no-remote
 # work
 bindsym XF86LaunchA exec --no-startup-id firejail chromium-browser --profile-directory="Default"
+bindsym $mod+XF86LaunchA exec --no-startup-id firejail chromium-browser --incognito
 bindsym XF86Explorer exec --no-startup-id firejail firefox -no-remote -profile ~/.mozilla/firefox/money
-bindsym $mod+XF86Explorer exec --no-startup-id firejail firefox -no-remote -profile ~/.mozilla/firefox/shopping
 
 # backlight
 bindsym XF86MonBrightnessUp exec sudo /home/jm/bin/iggy display +100
