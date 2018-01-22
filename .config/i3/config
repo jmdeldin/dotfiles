@@ -161,7 +161,7 @@ bindsym $mod+XF86MonBrightnessDown exec sudo /home/jm/bin/iggy keyboard -1
 
 # start compton (a compositor, which handles video much better than without
 # one)
-exec --no-startup-id compton --inactive-dim 0.1 -b
+exec --no-startup-id compton --inactive-dim 0.2 -b
 
 # background wallpaper
 exec --no-startup-id feh --bg-scale $(find ~/Pictures/walls/ -type l -o -type f | shuf | head -1)
