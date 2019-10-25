@@ -41,7 +41,7 @@ function iv {
 }
 
 ################################################################# ENV
-export EDITOR=emacsclient
+export EDITOR="emacsclient -c"
 export HISTFILE=~/src/etc.priv/zhistory
 export HISTSIZE=1000000
 export SAVEHIST=1000000
