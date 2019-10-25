@@ -55,6 +55,8 @@ alias killfirst='sed "1d"'
 alias now='cd ~/now'
 alias grep='grep --color=auto'
 alias fuck_this_track='~/bin/remove_track'
+alias sleep_vcr='ssh vcr "sudo systemctl suspend"'
+alias wake_vcr='wakeonlan -i 192.168.1.191 bc:5f:f4:3a:a8:a0'
 
 if [[ $OSTYPE =~ "linux" ]]; then
     alias ls='ls --color=auto'
