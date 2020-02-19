@@ -125,8 +125,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+l exec "i3lock"
 
 # screenshots
-bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_$wx$h.png' -e 'mkdir -p /tmp/screenshots && mv $f /tmp/screenshots/'
-bindsym --release Shift+Print exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h.png' -e 'mkdir -p /tmp/screenshots && mv $f /tmp/screenshots/'
+bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_$wx$h.png' -e 'mkdir -p ~/Downloads/screenshots && mv $f ~/Downloads/screenshots/'
+bindsym --release Shift+Print exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h.png' -e 'mkdir -p ~/Downloads/screenshots && mv $f ~/Downloads/screenshots/'
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
