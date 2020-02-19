@@ -25,9 +25,9 @@ bar {
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec rxvt-unicode
-bindsym $mod+Shift+Return exec rxvt-unicode -name DarkTerm
-bindsym $mod+Shift+W exec rxvt-unicode -name LightTerm
+bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Shift+Return exec xfce4-terminal
+bindsym $mod+Shift+W exec xfce4-terminal
 
 # disable this annoying feature:
 focus_follows_mouse no
