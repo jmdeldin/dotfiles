@@ -40,6 +40,18 @@ function iv {
     feh --cache-thumbnails --fullscreen --auto-zoom --auto-rotate --borderless --draw-tinted --draw-exif --draw-filename $*
 }
 
+function _trackpad_id {
+    xinput list | grep TouchPad | awk -F= '{print $2}' |awk '{print $1}'
+}
+
+function disable_trackpad {
+    xinput --disable $(_trackpad_id)
+}
+
+function enable_trackpad {
+    xinput --enable $(_trackpad_id)
+}
+
 ################################################################# ENV
 export EDITOR="emacsclient -c"
 export HISTFILE=~/src/etc.priv/zhistory
