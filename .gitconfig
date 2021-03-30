@@ -1,7 +1,7 @@
 [user]
-	name	= Jon-Michael Deldin
+	name = Jon-Michael Deldin
 	email = dev@jmdeldin.com
-	signingkey = B13EE2CE
+	signingkey = BFCFDC2AB13EE2CE
 
 [alias]
 	ci = commit
@@ -23,3 +23,5 @@
 
 [commit]
 	gpgsign = true
+[gpg]
+	program = gpg2
