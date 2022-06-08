@@ -4,6 +4,7 @@
 	signingkey = BFCFDC2AB13EE2CE
 
 [alias]
+	cp = cherry-pick
 	ci = commit
 	co = checkout
 	p = pull --rebase
@@ -25,3 +26,5 @@
 	gpgsign = true
 [gpg]
 	program = gpg2
+[checkout]
+	defaultRemote = origin
